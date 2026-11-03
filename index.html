@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inside the OS — Museum Exhibit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="badge"><i></i> Tech Museum · Interactive Exhibit</div>
+  <h1>Inside the <span>Operating System</span></h1>
+  <p class="sub">
+    Your computer runs dozens of programs at once, keeps thousands of files organised, and still stops
+    strangers from touching your data. Behind the scenes, four key OS components make it all happen.
+  </p>
+  <p class="hint">▾ Click an exhibit to open it ▾</p>
+</header>
+
+<main class="grid" id="grid">
+
+  <button class="card" data-key="process" style="--accent:#22d3ee">
+    <div class="c-icon">⚙️</div>
+    <h2>Process Management</h2>
+    <p>One CPU, many programs. Who gets to run next?</p>
+    <span class="cta">Open exhibit <em>→</em></span>
+  </button>
+
+  <button class="card" data-key="file" style="--accent:#a78bfa">
+    <div class="c-icon">🗂️</div>
+    <h2>File Management</h2>
+    <p>Finding, storing and organising every file on your disk.</p>
+    <span class="cta">Open exhibit <em>→</em></span>
+  </button>
+
+  <button class="card" data-key="memory" style="--accent:#34d399">
+    <div class="c-icon">🧠</div>
+    <h2>Memory Management</h2>
+    <p>Handing out RAM — and keeping everyone in their own lane.</p>
+    <span class="cta">Open exhibit <em>→</em></span>
+  </button>
+
+  <button class="card" data-key="security" style="--accent:#fb7185">
+    <div class="c-icon">🔐</div>
+    <h2>Security Management</h2>
+    <p>Who is allowed to touch the files, memory and hardware?</p>
+    <span class="cta">Open exhibit <em>→</em></span>
+  </button>
+
+</main>
+
+<footer>
+  <b>ET0023 Operating Systems</b> · Chapter 1 — Components of an Operating System<br>
+  Built as a group activity · Click, explore, and try the mini demos.
+</footer>
+
+<!-- ================= OVERLAY ================= -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="panel" id="panel">
+    <button class="close" id="closeBtn" aria-label="Close exhibit">✕</button>
+
+    <div class="ov-head">
+      <div class="ov-icon" id="ovIcon">⚙️</div>
+      <div>
+        <h2 id="ovTitle">Title</h2>
+        <p id="ovTag">Tag</p>
+      </div>
+    </div>
+
+    <div class="ov-grid">
+      <div class="info">
+        <h3>What it does</h3>
+        <p id="ovDesc"></p>
+      </div>
+      <div class="info">
+        <h3>Think of it like…</h3>
+        <p id="ovAnalogy"></p>
+      </div>
+      <div class="info">
+        <h3>On your real computer</h3>
+        <p id="ovExample"></p>
+      </div>
+    </div>
+
+    <div class="demo-title">Try it — <b>interactive demo</b></div>
+    <div class="demo" id="demoArea"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
